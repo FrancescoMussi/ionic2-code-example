@@ -1,0 +1,84 @@
+<ion-header no-border>
+	<ion-toolbar>
+		<ion-title>
+			<span color="white" *ngIf="!gameOver">Stage: {{ currentStage }}/10</span>
+		</ion-title>
+		<ion-buttons start>
+			<button ion-button (click)="dismiss()">
+				<span ion-text>Exit</span>
+			</button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	
+	<div text-center class="currentWordContainer" *ngIf="!gameOver">
+		<span color="white">The current word:</span> <span class="currentWord"> {{ currentWord }} </span>
+	</div>
+	
+
+	<div text-center *ngIf="gameOver">
+		<h2 color="white">Game over!</h2>
+		<p class="gameOverPoints">You have totalized {{ totalPoints }} points</p>
+		<p class="gameOverMessage"> {{ gameOverFinalMessage }} </p>
+		<div text-center>
+			<img [src]="gameOverImagePath" alt="">
+		</div>
+	</div>
+
+
+	<div text-center *ngIf="!currentWord"> 
+		<ion-spinner name="dots" color="white"></ion-spinner>
+	</div>
+
+	
+	<div *ngIf="currentWord && !gameOver" class="item html center">
+		<h2 class="seconds">{{ seconds }}</h2>
+		<svg class="center" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+			<g>
+				<title>Layer 1</title>
+				<circle id="circle" class="circle_animation" [style.stroke-dashoffset]="circleAnimator" r="69.85699" cy="81" cx="81" stroke-width="13" stroke="white" fill="none"/>
+			</g>
+		</svg>
+	</div>
+
+
+	<div class="formInput" *ngIf="!gameOver">
+
+		<span *ngIf="showMessageSuccess"> 
+			<div class="alert alert-custom alert-dismissible">
+				<button type="button" class="close" (click)="closeMessage('success')">&times;</button>
+				<ion-icon name="happy" class="alertIcon"></ion-icon> {{ messageSuccess }} 
+			</div>
+		</span>
+
+		<span *ngIf="showMessageError"> 
+			<div class="alert alert-custom alert-dismissible">
+				<button type="button" class="close" (click)="closeMessage('error')">&times;</button>
+				<ion-icon name="sad" class="alertIcon"></ion-icon> {{ messageError }} 
+			</div>
+		</span>
+
+
+		<form [formGroup]="wordInputForm" (ngSubmit)="checkWord()" novalidate>
+
+			<ion-input class="inputWord" #wordInput type="text" formControlName="wordInput" placeholder="Enter here the rhyme"></ion-input>
+
+			<ion-item *ngIf="wordInputForm.controls.wordInput.hasError('pattern') && submitAttempt" text-wrap>
+				<p>It must contain only characters</p>
+			</ion-item>
+			
+			<button ion-button block type="submit" class="submitButton" icon-left> 
+				<ion-icon name="paper-plane"></ion-icon>  
+				Submit
+			</button>
+
+		</form>
+
+	</div>
+
+	
+
+</ion-content>

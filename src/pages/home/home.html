@@ -1,0 +1,46 @@
+<ion-content padding>
+
+	<div text-center class="titleContainer" [@titleAnimation]="titleState">
+		<h1 class="title white">
+			yoApp
+		</h1>
+
+	</div>
+
+
+	<div text-center>
+		<img src="assets/images/big.png" alt="" class="imgVinil" [@imageAnimation]="imageState">
+	</div>
+	
+	
+	<div text-center [@levelButtonsFadeIn]="levelButtonsState">
+		<h4 color="white">Select your level:</h4>
+		<button ion-button class="levelButton" [@levelButtonsClickAnimation]="easyBounceState" [class.active]="level == 'easy'" (click)="selectLevel('easy')">Easy</button>
+		<button ion-button class="levelButton" [@levelButtonsClickAnimation]="mediumBounceState" [class.active]="level == 'medium'" (click)="selectLevel('medium')">Medium</button>
+		<button ion-button class="levelButton" [@levelButtonsClickAnimation]="hardBounceState" [class.active]="level == 'hard'" (click)="selectLevel('hard')">Hard</button>
+		<button ion-button class="levelButton" [@levelButtonsClickAnimation]="randomBounceState" [class.active]="level == 'random'" (click)="selectLevel('random')">Random</button>
+	</div>
+
+	
+	<span *ngIf="showValidationError"> 
+		<div class="alert alert-custom alert-dismissible">
+			<button type="button" class="close" (click)="closeMessage('error')">&times;</button>
+			Select a level bro!
+		</div>
+	</span>
+
+	
+	<div class="buttonsContainer" text-center [@mainButtonsFadeIn]="mainButtonsState">
+		<button ion-button (click)="goToInfo()" class="playButton" icon-left>
+			<ion-icon name="information-circle"></ion-icon>
+			How to play
+		</button>
+
+		<button ion-button (click)="startGame()" class="playButton" icon-left>
+			<ion-icon name="game-controller-b"></ion-icon>
+			Play
+		</button>
+	</div>
+			
+	
+</ion-content>

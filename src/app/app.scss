@@ -1,0 +1,94 @@
+
+.scroll-content {
+	overflow-y: auto!important;
+}
+
+ion-content {
+
+	background-color: #fe8c8c!important;
+}
+
+.button-md {
+
+	box-shadow: none!important;
+}
+
+.white {
+
+	color: white;
+}
+
+.input-cover {
+	position: static;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.alert {
+	padding: 10px;
+	padding-bottom:15px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.alert-custom {
+	color: rgba(95, 95, 95, 1);
+	background-color: white;
+	margin-top: 15px;
+	font-size: 1.7rem;
+
+}
+
+.alertIcon {
+	font-size: 3rem;
+	padding-right: 10px;
+	vertical-align: sub;
+}
+
+.alert-dismissible {
+	padding-right: 35px;
+}
+
+.close {
+	float: right;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 1;
+	color: #000;
+	text-shadow: 0 1px 0 #fff;
+	filter: alpha(opacity=20);
+	opacity: .2;
+}
+
+.alert-dismissible .close {
+	position: relative;
+	top: -2px;
+	right: -21px;
+	color: inherit;
+}
+
+button.close {
+	-webkit-appearance: none;
+	padding: 0;
+	cursor: pointer;
+	background: 0 0;
+	border: 0;
+}
+
+.text-input::-moz-placeholder {
+	color: white;
+}
+
+.text-input:-ms-input-placeholder {
+	color: white;
+}
+
+.text-input::-webkit-input-placeholder {
+	text-indent: 0;
+	color: white;
+}
+

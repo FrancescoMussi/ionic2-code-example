@@ -1,0 +1,84 @@
+game-modal {
+
+
+	.item h2 {
+		text-align:center;
+		position: absolute;
+		line-height: 125px;
+		width: 100%;
+	}
+
+	svg {
+		-webkit-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
+
+	.circle_animation {
+		stroke-dasharray: 440; /* circumference of the circle */
+		stroke-dashoffset: 440;
+		transition: all 1s linear;
+		stroke-dashoffset: 0;
+	}
+
+	ion-spinner * {
+		width: 28px;
+		height: 28px;
+		stroke: #444;
+		fill: #222;
+	}
+	
+	.currentWord {
+
+		text-decoration: underline;
+		
+		font-weight: bold;
+		color: white;
+	}
+
+	.currentWordContainer {
+
+		font-size: 2.6rem;
+		margin-top: 7.5%;
+		margin-bottom: 15%;
+	}
+
+	.seconds {
+
+		margin-top: 10px!important;
+		color: white;
+	}
+
+	.inputWord {
+
+		color: white;
+		font-size: 2rem;
+	}
+
+	.submitButton {
+
+		background-color: rgba(95, 95, 95, 1);
+		font-size: 1.5rem;
+		height: 5rem;
+	}
+
+	.formInput {
+
+		margin-top: 5%;
+	}
+
+
+	.gameOverPoints {
+
+		color:white;
+		font-size: 2rem;
+	}
+
+	.gameOverMessage {
+
+		color:white;
+		font-size: 2.5rem;
+	}
+
+
+
+}
