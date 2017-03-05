@@ -54,6 +54,7 @@ Here is a plunker of the app:
 
 http://plnkr.co/edit/3MZ2pnG5z7zCfkQgPUpI?p=preview
 
-Note: for simplicity the style is all in one file: app.css and has been slightly modified for the plunker. Use Github as code reference.
+Note: for simplicity sake the style has been put all in one file: app.css and has been slightly modified for the plunker. </br>
+Use Github as code reference.
 
 
