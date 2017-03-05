@@ -48,5 +48,12 @@ It's a rather small app. Yet it gave the possibility to handle several topics:
   <li>Basic app styling - custom css to give some nice flat design</li>
 </ul>
 
+<h2>Demo</h2>
+
+Here is a plunker of the app:
+
+http://plnkr.co/edit/3MZ2pnG5z7zCfkQgPUpI?p=preview
+
+Note: for simplicity the style is all in one file: app.css and has been slightly modified for the plunker. Use Github as code reference.
 
 
